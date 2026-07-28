@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="mainmenu.css">
+    <title>Main Menu</title>
+</head>
+
+<body>
+    <header>
+        <section class="colorDefondo">
+            <nav class="navbar navbar-expand-lg barraDeNavegacion container">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="/img/car_logo.png" alt="Logo"></a>
+
+                    <form class="d-flex barraDeBusqueda" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">
+                            <span><img src="/img/lupa.png" alt="Buscar"></span>
+                        </button>
+                    </form>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="indexcarros.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="indexcarros.html">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="formulario.html">Contacto</a>
+                            </li>
+                            <a href="user-menu-general.html" class="ms-lg-3 mt-2 mt-lg-0">
+                                <button class="btn btn-outline-success user-icon" type="button">
+                                    <img class="user-img" src="/img/user.png" alt="Usuario">
+                                </button>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <section class="line-section"></section>
+
+    <section class="background-carrusel">
+        <div id="heroSlider" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active hero-slide" style="background-image: url('/img/hero-1.jpg');">
+                    <div class="hero-overlay"></div>
+                    <div
+                        class="container h-100 d-flex align-items-center justify-content-center text-center text-white position-relative style-hero-content">
+                        <div>
+                            <h1 class="display-3 fw-bold">Últimos Modelos</h1>
+                            <p class="lead">¡Los autos más recientes! Échales un vistazo.</p>
+                            <a href="#" class="btn btn-explore mt-3">CATÁLOGO ➔</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item hero-slide" style="background-image: url('/img/hero-2.jpg');">
+                    <div class="hero-overlay"></div>
+                    <div
+                        class="container h-100 d-flex align-items-center justify-content-center text-center text-white position-relative style-hero-content">
+                        <div>
+                            <h1 class="display-3 fw-bold">Rendimiento Único</h1>
+                            <p class="lead">Encuentra el vehículo perfecto para ti.</p>
+                            <a href="#" class="btn btn-explore mt-3">CATÁLOGO ➔</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item hero-slide" style="background-image: url('/img/hero-3.jpg');">
+                    <div class="hero-overlay"></div>
+                    <div
+                        class="container h-100 d-flex align-items-center justify-content-center text-center text-white position-relative style-hero-content">
+                        <div>
+                            <h1 class="display-3 fw-bold">Diseño Premium</h1>
+                            <p class="lead">Experimenta el lujo sobre ruedas.</p>
+                            <a href="#" class="btn btn-explore mt-3">CATÁLOGO ➔</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="line-section-2"></section>
+
+    <section class="container my-5">
+        <div class="row justify-content-center gap-4">
+            <div class="card targetas-servicios col-md-3" style="width: 18rem;">
+                <img src="/img/catalogo.jpg" class="card-img-top" alt="Catálogo">
+                <div class="card-body">
+                    <h5 class="card-title">Catálogo</h5>
+                    <p class="card-text">Busca los detalles más recientes.</p>
+                    <a href="#" class="btn btn-primary">Buscar</a>
+                </div>
+            </div>
+
+            <div class="card targetas-servicios col-md-3" style="width: 18rem;">
+                <img src="/img/mantenimiento.jpg" class="card-img-top" alt="Mantenimiento">
+                <div class="card-body">
+                    <h5 class="card-title">Mantenimiento</h5>
+                    <p class="card-text">Encuentra lugares cercanos a ti.</p>
+                    <a href="#" class="btn btn-primary">Buscar</a>
+                </div>
+            </div>
+
+            <div class="card targetas-servicios col-md-3" style="width: 18rem;">
+                <img src="/img/hubicacion.jpg" class="card-img-top" alt="Ubicación">
+                <div class="card-body">
+                    <h5 class="card-title">Ubicación</h5>
+                    <p class="card-text">Navega en un mapa interactivo.</p>
+                    <a href="#" class="btn btn-primary">Buscar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-site py-5">
+        <section class="container">
+            <div class="row g-4">
+                <article class="col-lg-5 footer-brand-section">
+                    <img src="/img/car_logo.png" alt="Nexcar Logo" class="footer-logo mb-4">
+                    <h6 class="mb-3">¡Comenta sobre vehículos que te gusten!</h6>
+
+                    <div class="newsletter-form barra-comentario">
+                        <form class="d-flex">
+                            <input placeholder="Tu comentario..." type="email"
+                                class="form-control footer-input">
+                            <button type="button" class="btn boton-comentario-footer">comentar</button>
+                        </form>
+                    </div>
+                </article>
+
+                <article class="col-lg-7">
+                    <div class="row">
+                        <div class="col-6 col-sm-4 col-md-3 mb-4">
+                            <ul class="list-unstyled footer-links">
+                                <li class="title-column">Sobre nosotros</li>
+                                <li><a href="#">Nuestra historia</a></li>
+                                <li><a href="#">Logros</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 mb-4">
+                            <ul class="list-unstyled footer-links">
+                                <li class="title-column">Servicios</li>
+                                <li><a href="#">Catalogo</a></li>
+                                <li><a href="#">Mantenimiento</a></li>
+                                <li><a href="#">Localizacion</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 mb-4">
+                            <ul class="list-unstyled footer-links">
+                                <li class="title-column">Contacto</li>
+                                <li><a href="#">Centro de ayuda</a></li>
+                                <li><a href="#">Politicas de privacidad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col text-center">
+                    <p class="text-muted small">&copy; 2026 Nextcar, todos los derechos reservados</p>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

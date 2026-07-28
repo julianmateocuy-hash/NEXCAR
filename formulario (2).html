@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexcar | Plataforma Automotriz</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+   <!-- FONDO -->
+<div class="background-overlay"></div>
+
+<!-- CONTENEDOR PRINCIPAL -->
+<section class="main-container">
+
+    <!-- PANEL IZQUIERDO -->
+    <div class="auth-container">
+
+        <!-- LOGO -->
+        <div class="logo">
+
+            <div class="logo-icon">
+                <img src="IMG/f51cb2d9-0b57-44c0-b49e-bd62bbb44a9a.jpg" alt="NEXCAR">
+            </div>
+
+            <div>
+
+                <h1>NEXCAR</h1>
+
+                <span>
+                    Maneja el futuro
+                </span>
+
+            </div>
+
+        </div>
+
+        <!-- LOGIN -->
+        <div id="loginSection">
+
+            <div class="title-area">
+
+                <h2>
+                    Iniciar Sesión
+                </h2>
+
+                <p>
+                    Accede a tu cuenta
+                </p>
+
+            </div>
+
+            <!-- SELECTOR DE ROL LOGIN -->
+            <div class="role-toggle" id="loginRoleToggle">
+
+                <button type="button" class="role-btn active" data-role="comprador">
+                    Comprador
+                </button>
+
+                <button type="button" class="role-btn" data-role="vendedor">
+                    Vendedor
+                </button>
+
+            </div>
+
+            <form id="loginForm">
+
+                <div class="input-group">
+
+                    <label>
+                        Correo
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="correo@nexcar.com"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>
+                        Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="********"
+                        autocomplete="current-password"
+                        required
+                    >
+
+                </div>
+
+                <button
+                    type="button"
+                    class="forgot-link"
+                    id="showForgot"
+                >
+                    ¿Olvidaste tu contraseña?
+                </button>
+
+                <button
+                    type="submit"
+                    class="main-btn"
+                    id="loginSubmitBtn"
+                >
+                    INGRESAR
+                </button>
+
+                <div
+                    class="message"
+                    id="loginMessage"
+                ></div>
+
+            </form>
+
+            <div class="switch-area">
+
+                <p>
+                    ¿No tienes cuenta?
+                </p>
+
+                <button
+                    id="showRegister"
+                    class="switch-btn"
+                    type="button"
+                >
+                    Registrarse
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- REGISTRO -->
+        <div id="registerSection" style="display:none;">
+
+            <div class="title-area">
+
+                <h2>
+                    Crear Cuenta
+                </h2>
+
+                <p id="registerSubtitle">
+                    Regístrate como comprador
+                </p>
+
+            </div>
+
+            <!-- SELECTOR DE ROL REGISTRO -->
+            <div class="role-toggle" id="registerRoleToggle">
+
+                <button type="button" class="role-btn active" data-role="comprador">
+                    Comprador
+                </button>
+
+                <button type="button" class="role-btn" data-role="vendedor">
+                    Vendedor
+                </button>
+
+            </div>
+
+            <!-- BARRA DE PROGRESO DEL ASISTENTE -->
+            <div class="wizard-progress">
+
+                <div class="wizard-bar">
+                    <div class="wizard-bar-fill" id="wizardBarFill"></div>
+                </div>
+
+                <span id="wizardStepLabel">
+                    Paso 1 de 5
+                </span>
+
+            </div>
+
+            <form id="registerForm">
+
+                <!-- PASO: NOMBRE -->
+                <div class="input-group wizard-step" data-field="name">
+
+                    <label id="registerNameLabel">
+                        Nombre Completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerName"
+                        placeholder="Juan Pérez"
+                    >
+
+                </div>
+
+                <!-- PASO: NIT/CÉDULA (SOLO VENDEDOR) -->
+                <div class="input-group wizard-step" data-field="document" data-roles="vendedor">
+
+                    <label>
+                        NIT o Cédula
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerDocument"
+                        placeholder="900123456-7"
+                    >
+
+                </div>
+
+                <!-- PASO: DIRECCIÓN (SOLO VENDEDOR) -->
+                <div class="input-group wizard-step" data-field="address" data-roles="vendedor">
+
+                    <label>
+                        Dirección del Concesionario
+                    </label>
+
+                    <input
+                        type="text"
+                        id="registerAddress"
+                        placeholder="Cra 10 # 20-30, Bogotá"
+                    >
+
+                </div>
+
+                <!-- PASO: CORREO -->
+                <div class="input-group wizard-step" data-field="email">
+
+                    <label>
+                        Correo Electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="registerEmail"
+                        placeholder="correo@nexcar.com"
+                        autocomplete="username"
+                    >
+
+                </div>
+
+                <!-- PASO: TELÉFONO -->
+                <div class="input-group wizard-step" data-field="phone">
+
+                    <label>
+                        Teléfono
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="registerPhone"
+                        placeholder="3001234567"
+                    >
+
+                </div>
+
+                <!-- PASO: CONTRASEÑA -->
+                <div class="wizard-step" data-field="password">
+
+                    <div class="input-group">
+
+                        <label>
+                            Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="registerPassword"
+                            placeholder="********"
+                            autocomplete="new-password"
+                        >
+
+                    </div>
+
+                    <!-- FUERZA CONTRASEÑA -->
+
+                    <div class="strength-container">
+
+                        <div class="strength-bar">
+
+                            <div
+                                class="strength-fill"
+                                id="strengthFill"
+                            ></div>
+
+                        </div>
+
+                        <span id="strengthText">
+                            Seguridad
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- PASO: CONFIRMAR CONTRASEÑA -->
+                <div class="input-group wizard-step" data-field="confirm">
+
+                    <label>
+                        Confirmar Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="********"
+                        autocomplete="new-password"
+                    >
+
+                </div>
+
+                <div class="wizard-nav">
+
+                    <button
+                        type="button"
+                        class="wizard-back-btn"
+                        id="registerBackBtn"
+                    >
+                        Atrás
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="main-btn"
+                        id="registerSubmitBtn"
+                    >
+                        SIGUIENTE
+                    </button>
+
+                </div>
+
+                <div
+                    class="message"
+                    id="registerMessage"
+                ></div>
+
+            </form>
+
+            <div class="switch-area">
+
+                <p>
+                    ¿Ya tienes cuenta?
+                </p>
+
+                <button
+                    id="showLogin"
+                    class="switch-btn"
+                    type="button"
+                >
+                    Iniciar Sesión
+                </button>
+
+            </div>
+
+
+        </div>
+
+        <!-- RECUPERAR CONTRASEÑA -->
+        <div id="forgotSection" style="display:none;">
+
+            <div class="title-area">
+
+                <h2>
+                    Recuperar Contraseña
+                </h2>
+
+                <p id="forgotSubtitle">
+                    Ingresa tu correo para continuar
+                </p>
+
+            </div>
+
+            <form id="forgotForm">
+
+                <div class="input-group" id="forgotEmailGroup">
+
+                    <label>
+                        Correo
+                    </label>
+
+                    <input
+                        type="email"
+                        id="forgotEmail"
+                        placeholder="correo@nexcar.com"
+                        autocomplete="username"
+                        required
+                    >
+
+                </div>
+
+                <div id="forgotResetFields" hidden>
+
+                    <div class="input-group">
+
+                        <label>
+                            Nueva Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="forgotNewPassword"
+                            placeholder="********"
+                            autocomplete="new-password"
+                        >
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>
+                            Confirmar Nueva Contraseña
+                        </label>
+
+                        <input
+                            type="password"
+                            id="forgotConfirmPassword"
+                            placeholder="********"
+                            autocomplete="new-password"
+                        >
+
+                    </div>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="main-btn"
+                    id="forgotSubmitBtn"
+                >
+                    BUSCAR CUENTA
+                </button>
+
+                <div
+                    class="message"
+                    id="forgotMessage"
+                ></div>
+
+            </form>
+
+            <div class="switch-area">
+
+                <p>
+                    ¿Ya la recordaste?
+                </p>
+
+                <button
+                    id="backToLoginFromForgot"
+                    class="switch-btn"
+                    type="button"
+                >
+                    Volver a Iniciar Sesión
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- PANEL DERECHO -->
+    <div class="showcase">
+
+        <img
+            src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1600&auto=format&fit=crop"
+            alt="Nexcar"
+            class="hero-car"
+        >
+
+        <div class="showcase-content">
+
+            <h2>
+                Conduce el futuro
+            </h2>
+
+            <p>
+                Encuentra vehículos premium,
+                alquileres exclusivos y la mejor
+                experiencia automotriz.
+            </p>
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <h3 id="carsCount">
+                        0
+                    </h3>
+
+                    <span>
+                        Vehículos
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3 id="citiesCount">
+                        0
+                    </h3>
+
+                    <span>
+                        Ciudades
+                    </span>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <h3 id="clientsCount">
+                        0
+                    </h3>
+
+                    <span>
+                        Clientes
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="scriptregistro.js"></script>
+
+</body>
+</html>

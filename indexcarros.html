@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TU NEXCAR | Encuentra tu vehículo ideal</title>
+
+    <link rel="stylesheet" href="stylescarros.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- removed stray link anchor -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+</head>
+
+<!-- ==========================
+     BARRA DE NAVEGACIÓN
+========================== -->
+
+<section class="colorDefondo">
+
+    <nav class="navbar navbar-expand-lg barraDeNavegacion container">
+
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="#">
+                <img src="img/logo-carro.png"alt="Logo">
+            </a>
+
+            <form class="d-flex barraDeBusqueda" role="search">
+
+                <input class="form-control me-2"
+                       type="search"
+                       placeholder="Buscar vehículo..."
+                       aria-label="Search" />
+
+                <button class="btn btn-outline-success" type="submit">
+
+                    <span>
+                        <img src="img/lupa-icon.png" alt="Buscar">
+                    </span>
+
+                </button>
+
+            </form>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse"
+                 id="navbarNavDropdown">
+
+                <ul class="navbar-nav ms-auto align-items-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link "
+                           aria-current="page"
+                           href="indexcatalogo.html">
+                           Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Vehículos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">
+                            Contacto
+                        </a>
+                    </li>
+
+                    <a href="user-menu-general.html"
+                       class="ms-lg-3 mt-2 mt-lg-0">
+
+                        <button class="btn btn-outline-success user-icon"
+                                type="button">
+
+                            <img class="user-img"
+                                 src="img/user.png"
+                                 alt="Usuario">
+
+                        </button>
+
+                    </a>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</section>
+
+<!-- ==========================
+     FIN BARRA DE NAVEGACIÓN
+========================== -->
+
+
+
+
+
+<body>
+
+
+
+
+    <!-- ENCABEZADO -->
+
+    <section class="hero">
+
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>TU NEXCAR</h1>
+
+            <p>
+                Encuentra el vehículo de tus sueños al mejor precio
+            </p>
+
+            <div class="buscador">
+
+                <input type="text"
+                    placeholder="Buscar marca, modelo o referencia">
+
+                <button>
+                    Buscar
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FILTRO DE MARCAS -->
+
+   <!-- FILTRO DE MARCAS -->
+
+<section class="marcas">
+
+    <h2>Explorar por Marca</h2>
+
+    <div class="logos-marcas">
+
+        <div class="logo-card">
+            <img src="miniaturas/Bmw/bmw.png" alt="BMW">
+            <span>BMW</span>
+        </div>
+
+        <div class="logo-card">
+            <img src="miniaturas/Audi/audi.png" alt="Audi">
+            <span>Audi</span>
+        </div>
+
+        <div class="logo-card">
+            <img src="miniaturas/Mercedes/Mercedes.png" alt="Mercedes">
+            <span>Mercedes</span>
+        </div>
+
+        <div class="logo-card">
+            <img src="miniaturas/Toyota/Toyota.png" alt="Toyota">
+            <span>Toyota</span>
+        </div>
+
+        <div class="logo-card">
+            <img src="miniaturas/Chevrolet/chevrolet.png" alt="Chevrolet">
+            <span>Chevrolet</span>
+        </div>
+
+        <div class="logo-card">
+            <img src="miniaturas/Ford/ford.png" alt="Ford">
+            <span>Ford</span>
+        </div>
+
+        <div class="logo-card">
+            <img src="miniaturas/Kia/KIA.png" alt="KIA">
+            <span>KIA</span>
+        </div>
+
+        <div class="logo-card">
+            <img src="miniaturas/Hyundai/hyundai.png" alt="Hyundai">
+            <span>Hyundai</span>
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- FILTROS -->
+
+    <section class="filtros">
+
+        <select>
+            <option>Marca</option>
+            <option>BMW</option>
+            <option>Audi</option>
+            <option>Mercedes</option>
+            <option>Toyota</option>
+        </select>
+
+        <select>
+            <option>Precio</option>
+            <option>Hasta $50.000.000</option>
+            <option>Hasta $100.000.000</option>
+            <option>Hasta $200.000.000</option>
+        </select>
+
+        <select>
+            <option>Combustible</option>
+            <option>Gasolina</option>
+            <option>Diésel</option>
+            <option>Híbrido</option>
+            <option>Eléctrico</option>
+        </select>
+
+        <button class="btn-filtrar">
+            Aplicar filtros
+        </button>
+
+    </section>
+
+    <!-- VEHÍCULOS DESTACADOS -->
+
+    <section class="vehiculos">
+
+        <h2>Vehículos Destacados</h2>
+
+        <div class="contenedor-autos">
+
+            <!-- TARJETA 1 -->
+
+            <div class="card-auto">
+
+                <div class="etiqueta">
+                    Destacado
+                </div>
+
+                <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e">
+
+                <div class="info-auto">
+
+                    <h3>BMW 530e</h3>
+
+                    <p class="precio">
+                        $145.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2023</span>
+                        <span>15.000 km</span>
+                        <span>Híbrido</span>
+
+                    </div>
+
+                    <a href="detalle.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 2 -->
+
+            <div class="card-auto">
+
+                <img src="img/Mercedes C200.webp" alt="mercedes c200">
+
+                <div class="info-auto">
+
+                    <h3>Mercedes C200</h3>
+
+                    <p class="precio">
+                        $168.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2024</span>
+                        <span>8.000 km</span>
+                        <span>Gasolina</span>
+
+                    </div>
+
+                    <a href="Mercedes C200.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 3 -->
+
+            <div class="card-auto">
+
+                <img src="img/Audi A4.jpg" alt="audi a4">
+
+                <div class="info-auto">
+
+                    <h3>Audi A4</h3>
+
+                    <p class="precio">
+                        $138.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2023</span>
+                        <span>20.000 km</span>
+                        <span>Turbo</span>
+
+                    </div>
+
+                    <a href="Audi A4.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 4 -->
+
+            <div class="card-auto">
+
+                <img src="img/Mazda CX-5.jpg" alt="carro mazda">
+
+                <div class="info-auto">
+
+                    <h3>Mazda CX-5</h3>
+
+                    <p class="precio">
+                        $120.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2024</span>
+                        <span>5.000 km</span>
+                        <span>SUV</span>
+
+                    </div>
+
+                    <a href="Mazda CX-5.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 5 -->
+
+            <div class="card-auto">
+
+                <div class="etiqueta nueva">
+                    Nuevo
+                </div>
+
+                <img src="img/Toyota Corolla Cross.jgp.avif" alt="carro tollota">
+
+                <div class="info-auto">
+
+                    <h3>Toyota Corolla Cross</h3>
+
+                    <p class="precio">
+                        $115.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2025</span>
+                        <span>0 km</span>
+                        <span>Híbrido</span>
+
+                    </div>
+
+                    <a href="Toyota Corolla Cross.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 6 -->
+
+            <div class="card-auto">
+
+                <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8">
+
+                <div class="info-auto">
+
+                    <h3>Ford Mustang GT</h3>
+
+                    <p class="precio">
+                        $230.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2024</span>
+                        <span>3.500 km</span>
+                        <span>V8</span>
+
+                    </div>
+
+                    <a href="Ford Mustang GT.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+                        <!-- TARJETA 7 -->
+
+            <div class="card-auto">
+
+                <img src="img/Chevrolet Captiva.jpg" alt="chebrolet captiva">
+
+                <div class="info-auto">
+
+                    <h3>Chevrolet Captiva</h3>
+
+                    <p class="precio">
+                        $95.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2023</span>
+                        <span>18.000 km</span>
+                        <span>SUV</span>
+
+                    </div>
+
+                    <a href="Chevrolet Captiva.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 8 -->
+
+            <div class="card-auto">
+
+                <img src="img/KIA Sportage.jpg" alt="carro kia">
+
+                <div class="info-auto">
+
+                    <h3>KIA Sportage</h3>
+
+                    <p class="precio">
+                        $128.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2024</span>
+                        <span>10.000 km</span>
+                        <span>Automática</span>
+
+                    </div>
+
+                    <a href="KIA Sportage.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 9 -->
+
+            <div class="card-auto">
+
+                <img src="img/Hyundai Tucson.jpg" alt="carro hunday">
+
+                <div class="info-auto">
+
+                    <h3>Hyundai Tucson</h3>
+
+                    <p class="precio">
+                        $122.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2024</span>
+                        <span>12.000 km</span>
+                        <span>SUV</span>
+
+                    </div>
+
+                    <a href="Hyundai Tucson.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 10 -->
+
+            <div class="card-auto">
+
+                <div class="etiqueta">
+                    Destacado
+                </div>
+
+                <img src="img/BMW X5.jpg" alt="carro BMW">
+
+                <div class="info-auto">
+
+                    <h3>BMW X5</h3>
+
+                    <p class="precio">
+                        $265.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2025</span>
+                        <span>0 km</span>
+                        <span>Luxury SUV</span>
+
+                    </div>
+
+                    <a href="BMW X5.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 11 -->
+
+            <div class="card-auto">
+
+               <img src="img/Renault Duster.jpg" alt="carro ranault">
+
+                <div class="info-auto">
+
+                    <h3>Renault Duster</h3>
+
+                    <p class="precio">
+                        $88.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2023</span>
+                        <span>25.000 km</span>
+                        <span>Gasolina</span>
+
+                    </div>
+
+                    <a href="Renault Duster.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 12 -->
+
+            <div class="card-auto">
+
+               <img src="img/Toyota Hilux.jpg" alt="carro toyota">
+
+                <div class="info-auto">
+
+                    <h3>Toyota Hilux</h3>
+
+                    <p class="precio">
+                        $175.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2024</span>
+                        <span>9.000 km</span>
+                        <span>4x4</span>
+
+                    </div>
+
+                    <a href="Toyota Hilux.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 13 -->
+
+            <div class="card-auto">
+
+                <img src="img/audi-q5-.jpg" alt="carro audi">
+
+                <div class="info-auto">
+
+                    <h3>Audi Q5</h3>
+
+                    <p class="precio">
+                        $198.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2024</span>
+                        <span>7.000 km</span>
+                        <span>Turbo</span>
+
+                    </div>
+
+                    <a href="Audi Q5.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 14 -->
+
+            <div class="card-auto">
+
+                <img src="img/Mercedes GLC 300.jpg" alt="carro Mercedes-Benz">
+
+                <div class="info-auto">
+
+                    <h3>Mercedes GLC 300</h3>
+
+                    <p class="precio">
+                        $245.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2025</span>
+                        <span>2.000 km</span>
+                        <span>Luxury</span>
+
+                    </div>
+
+                    <a href="Mercedes GLC 300.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 15 -->
+
+            <div class="card-auto">
+
+               <img src="img/Ford Ranger.jpg" alt="carro ford">
+
+                <div class="info-auto">
+
+                    <h3>Ford Ranger</h3>
+
+                    <p class="precio">
+                        $165.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2024</span>
+                        <span>8.000 km</span>
+                        <span>4x4</span>
+
+                    </div>
+
+                    <a href="Ford Ranger.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- TARJETA 16 -->
+
+            <div class="card-auto">
+
+                <div class="etiqueta nueva">
+                    Nuevo
+                </div>
+
+                <img src="img/KIA K5 GT.jpg" alt="carro kia">
+
+                <div class="info-auto">
+
+                    <h3>KIA K5 GT</h3>
+
+                    <p class="precio">
+                        $149.000.000
+                    </p>
+
+                    <div class="datos-auto">
+
+                        <span>2025</span>
+                        <span>0 km</span>
+                        <span>Turbo</span>
+
+                    </div>
+
+                    <a href="KIA K5 GT.html" class="btn-detalle">
+                        Ver Detalles
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ESTADISTICAS -->
+
+    <section class="estadisticas">
+
+        <div class="stat">
+
+            <h3>500+</h3>
+
+            <p>Vehículos publicados</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h3>50+</h3>
+
+            <p>Marcas disponibles</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h3>10.000+</h3>
+
+            <p>Clientes satisfechos</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h3>24/7</h3>
+
+            <p>Atención permanente</p>
+
+        </div>
+
+    </section>
+
+        <!-- SECCION PREMIUM -->
+
+    <section class="premium">
+
+        <div class="premium-contenido">
+
+            <span class="premium-badge">
+                ⭐ Premium
+            </span>
+
+            <h2>
+                Vehículos certificados y revisados
+            </h2>
+
+            <p>
+                En TU NEXCAR todos nuestros vehículos pasan por un proceso
+                de inspección para garantizar calidad, seguridad y confianza
+                al momento de realizar tu compra.
+            </p>
+
+            <div class="beneficios">
+
+                <div class="beneficio">
+
+                    <h3>✔ Inspección mecánica</h3>
+
+                    <p>
+                        Revisión completa del vehículo.
+                    </p>
+
+                </div>
+
+                <div class="beneficio">
+
+                    <h3>✔ Historial verificado</h3>
+
+                    <p>
+                        Consulta de antecedentes y documentación.
+                    </p>
+
+                </div>
+
+                <div class="beneficio">
+
+                    <h3>✔ Garantía</h3>
+
+                    <p>
+                        Cobertura en vehículos seleccionados.
+                    </p>
+
+                </div>
+
+                <div class="beneficio">
+
+                    <h3>✔ Financiación</h3>
+
+                    <p>
+                        Diferentes opciones de crédito.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- CTA -->
+
+    <section class="cta">
+
+        <div class="cta-contenido">
+
+            <h2>
+                ¿No encuentras el vehículo que buscas?
+            </h2>
+
+            <p>
+                Déjanos tus datos y nuestro equipo te ayudará a encontrar
+                el vehículo ideal para ti.
+            </p>
+
+            <a href="detalle.html" class="btn-cta">
+                Solicitar Asesoría
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- MARCAS DESTACADAS -->
+
+    <section class="marcas-destacadas">
+
+        <h2>
+            Marcas Más Buscadas
+        </h2>
+
+        <div class="marcas-grid">
+
+            <div class="marca-item">BMW</div>
+            <div class="marca-item">Audi</div>
+            <div class="marca-item">Mercedes-Benz</div>
+            <div class="marca-item">Toyota</div>
+            <div class="marca-item">Ford</div>
+            <div class="marca-item">Mazda</div>
+            <div class="marca-item">KIA</div>
+            <div class="marca-item">Hyundai</div>
+            <div class="marca-item">Renault</div>
+            <div class="marca-item">Chevrolet</div>
+
+        </div>
+
+    </section>
+
+    <!-- BOTON FLOTANTE -->
+
+    <a href="https://wa.me/573001234567"
+        class="whatsapp-float"
+        target="_blank">
+
+        💬
+
+    </a>
+
+
+
+<script src="script.js"></script>
+<script src="scriptcatalogo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<footer class="footer-site py-5">
+        <section class="container">
+            <div class="row g-4">
+                <article class="col-lg-5 footer-brand-section">
+                    <img src="/img/car_logo.png" alt="Nexcar Logo" class="footer-logo mb-4">
+                    <h6 class="mb-3">¡Comenta sobre vehículos que te gusten!</h6>
+
+                    <div class="newsletter-form barra-comentario">
+                        <form class="d-flex">
+                            <input placeholder="Tu comentario..." type="email"
+                                class="form-control footer-input">
+                            <button type="button" class="btn boton-comentario-footer">comentar</button>
+                        </form>
+                    </div>
+                </article>
+
+                <article class="col-lg-7">
+                    <div class="row">
+                        <div class="col-6 col-sm-4 col-md-3 mb-4">
+                            <ul class="list-unstyled footer-links">
+                                <li class="title-column">Sobre nosotros</li>
+                                <li><a href="#">Nuestra historia</a></li>
+                                <li><a href="#">Logros</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 mb-4">
+                            <ul class="list-unstyled footer-links">
+                                <li class="title-column">Servicios</li>
+                                <li><a href="indexcarros.html">Catalogo</a></li>
+                                <li><a href="indexcatalogo.html#mantenimientos">Mantenimiento</a></li>
+                                <li><a href="Ubicaciones.html#map">Localizacion</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-6 col-sm-4 col-md-3 mb-4">
+                            <ul class="list-unstyled footer-links">
+                                <li class="title-column">Contacto</li>
+                                <li><a href="#">Centro de ayuda</a></li>
+                                <li><a href="#">Politicas de Privacidad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="row mt-5 pt-4 border-top border-secondary">
+                <div class="col text-center">
+                    <p class="text-muted small">&copy; 2026 Nextcar, todos los derechos reservados</p>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+</body>
+
+</html>
